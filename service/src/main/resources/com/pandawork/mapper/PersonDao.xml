@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.yue.join.dao.PersonDao">
+    <!--目的：为dao接口方法提供sql语句配置-->
+    <!--增加person-->
+    <insert id="addPerson" parameterType="Person">
+       insert into t_person
+       (person_name,person_birthday,
+       person_department,person_team,person_comment)
+       values (#{person.name},#{person.birthday},
+       #{person.department},#{person.team},#{person.comment})
+    </insert>
+
+    <!-- 删除person -->
+    <delete id="delPerson" parameterType="String">
+        delete from t_person where person_name=#{person.name}
+    </delete>
+
+    <!-- 修改person -->
+    <update id="updatePerson" parameterType="Person,String" >
+        update t_person set person_name=#{person.name},
+        person_birthday=#{person.birthday},
+        person_department=#{person.department},
+        person_team=#{person.team},
+        person_comment=#{person.comment}
+        where name=#{person.name}
+      </update>
+
+    <!-- 根据name查找person -->
+    <select id="selectPerson" parameterType="String" resultType="Person">
+        select person_name name,person_birthday birthday ,person_department department ,person_team team ,person_comment comment from t_person where person_name=#{name}
+    </select>
+
+    <!-- 查询所有person -->
+    <select id="listAllPerson" resultType="Person">
+        select*from t_person
+    </select>
+</mapper>

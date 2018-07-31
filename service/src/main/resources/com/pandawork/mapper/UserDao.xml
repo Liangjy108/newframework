@@ -1,0 +1,29 @@
+<!--<?xml version="1.0" encoding="UTF-8" ?>-->
+<!--<!DOCTYPE mapper-->
+                <!--PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"-->
+                <!--"http://mybatis.org/dtd/mybatis-3-mapper.dtd">-->
+<!--<mapper namespace="com.yue.join.dao.UserDao">-->
+
+    <!--&lt;!&ndash;增加user&ndash;&gt;-->
+    <!--<insert id="addUser" parameterType="User">-->
+        <!--insert into t_user(user_userName,user_password,-->
+        <!--user_phone,user_qq,user_email)-->
+        <!--values (#{user.userName},#{user.password},-->
+        <!--#{user.phone},#{user.qq},#{user.email})-->
+    <!--</insert>-->
+
+
+
+    <!--&lt;!&ndash; 根据name查找user &ndash;&gt;-->
+    <!--<select id="selectUser" parameterType="String" resultType="User">-->
+        <!--select user_userName userName ,user_password password ,-->
+        <!--user_phone phone ,user_qq qq ,user_email email-->
+        <!--from t_user where user_userName=#{user.userName}-->
+    <!--</select>-->
+
+    <!--&lt;!&ndash; 查询所有user &ndash;&gt;-->
+    <!--<select id="listAllUser" resultType="User">-->
+        <!--select*from t_user-->
+    <!--</select>-->
+
+<!--</mapper>-->

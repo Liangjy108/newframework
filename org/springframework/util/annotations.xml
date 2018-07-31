@@ -1,0 +1,5 @@
+<root>
+    <item name='org.springframework.util.Assert void isNull(java.lang.Object)'>
+        <annotation name='java.lang.Deprecated'/>
+    </item>
+</root>
